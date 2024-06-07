@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Profile</title>
+  </head>
+  <body>
+    <h1>Profile Page</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Save</button>
+    </form>
+    {% if request.user.profile.youtube_url %}
+    <h2>Your YouTube Video</h2>
+    <iframe
+      width="560"
+      height="315"
+      src="https://www.youtube.com/embed/{{ request.user.profile.youtube_url|cut:'https://www.youtube.com/watch?v=' }}"
+      frameborder="0"
+      allowfullscreen
+    ></iframe>
+    {% endif %}
+  </body>
+</html>

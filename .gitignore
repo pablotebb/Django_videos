@@ -1,0 +1,16 @@
+# Entornos virtuales
+entorno_videos/
+
+# Archivos de base de datos
+*.sqlite3
+
+# Archivos de migración de Django
+**/migrations/
+
+# Archivos compilados de Python
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Configuraciones locales
+.entorno_videos.py
